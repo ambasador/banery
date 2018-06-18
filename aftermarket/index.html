@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="ad.size" content="width=994,height=132">
+    <link rel="stylesheet" href="style.css">
+    <!-- handmade by info@digital-legend.com -->
+</head>
+
+<body scroll="no">
+    <style type="text/css">
+    html,
+    body {
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+    }
+    </style>
+    <div style="cursor:pointer" onclick="window.open(window.clickTag, '_blank ')">
+        <div class="container" id="container">
+            <div class="box"></div>
+            <div class="scene-1">
+                <div id="red">
+                    <img src="red.png" alt="">
+                </div>
+                <div id="logo">
+                    <img src="logo.png" alt="">
+                </div>
+                <div id="search"><img src="search.png" alt=""></div>
+                <div id="market"><img src="market.png" alt=""></div>
+                <div id="image">
+                    <img src="bg-3.png" alt="">
+                </div>
+                <div id="searchbox">
+                </div>
+                <ul id="domains">
+                    <li class="item">
+                        <img src="d1.jpg" alt="">
+                    </li>
+                    <li class="item">
+                        <img src="d2.jpg" alt="">
+                    </li>
+                    <li class="item">
+                        <img src="d3.jpg" alt="">
+                    </li>
+                    <li class="item">
+                        <img src="d4.jpg" alt="">
+                    </li>
+                    <li class="item">
+                        <img src="d5.jpg" alt="">
+                    </li>
+                    <li class="item">
+                        <img src="d6.jpg" alt="">
+                    </li>
+                    <li class="item">
+                        <img src="d7.jpg" alt="">
+                    </li>
+                    <li class="item">
+                        <img src="d8.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
+            <div id="button">
+                <img src="arr.png" id="arrow" class="bounce" alt="">
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+    var clickTag = "";
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+    <script>
+    function preloadImages(e) { preloadImages.list || (preloadImages.list = []); for (var a = preloadImages.list, t = 0; t < e.length; t++) { var o = new Image;
+            o.onload = function() { var e = a.indexOf(this); - 1 !== e && a.splice(e, 1) }, a.push(o), o.src = e[t] } }
+    var items = document.querySelectorAll(".item"),
+        length = items.length,
+        duration = 1,
+        red = document.getElementById("red"),
+        logo = document.getElementById("logo"),
+        search = document.getElementById("search"),
+        market = document.getElementById("market"),
+        arrow = document.getElementById("arrow"),
+        image = document.getElementById("image"),
+        button = document.getElementById("button"),
+        searchbox = document.getElementById("searchbox");
+    preloadImages(["red.png", "logo.png", "search.png", "market.png", "bg-3.png", "arr.png", "d1.jpg", "d2.jpg", "d3.jpg", "d4.jpg", "d5.jpg", "d6.jpg", "d7.jpg", "d8.jpg", "bttn.jpg"]);
+    var tl = new TimelineMax({ delay: 0, repeat: -1, repeatDelay: 0 });
+    tl.from(red, .5, { x: -30, autoAlpha: 0, ease: Power3.easeOut })
+    .from(logo, .5, { x: -30, autoAlpha: 0, ease: Power3.easeOut })
+    .from(search, .5, { x: -30, autoAlpha: 0, ease: Power3.easeOut })
+    .to(search, .5, { x: 30, autoAlpha: 0, delay: 1, ease: Power3.easeOut })
+    .from(market, .5, { x: -30, autoAlpha: 0, ease: Power3.easeOut })
+    .to(market, .5, { x: 30, autoAlpha: 0, delay: 1, ease: Power3.easeOut })
+    .to(red, .5, { x: -600, ease: Power3.easeOut })
+    .to(logo, .5, { x: -540, y: 15, width: 239, height: 44, ease: Power3.easeOut })
+    .from(image, .5, { x: -30, autoAlpha: 0, ease: Power3.easeOut })
+    .from(searchbox, .5, { autoAlpha: 0, width: 0, ease: Power3.easeOut })
+    .from(button, .5, { autoAlpha: 0, x: -30, ease: Power3.easeOut })
+    .from(arrow, .5, { autoAlpha: 0, x: -30, ease: Power3.easeOut });
+    for (var i = 0; length > i; i += 1) 
+        tl.from(items[i], duration, { x: -20, opacity: 0, ease: Elastic.easeOut }), 
+    tl.to(items[i], duration, { x: -20, opacity: 0, ease: Elastic.easeIn });
+    tl.to(logo, .1, { autoAlpha: 0, ease: Power3.easeOut })
+    .to(image, .1, { autoAlpha: 0, ease: Power3.easeOut })
+    .to(searchbox, .1, { autoAlpha: 0, width: 0, ease: Power3.easeOut })
+    .to(button, .1, { autoAlpha: 0, x: -30, ease: Power3.easeOut })
+    .to(arrow, 0, { autoAlpha: 0, x: -30, ease: Power3.easeOut });
+    </script>
+</body>
+
+</html>

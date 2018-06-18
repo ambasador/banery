@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="ad.size" content="width=750,height=300">
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<script>
+    var clickTag = "https://promocje.open.pl/lpp/1704-multi/krok.php";
+</script>
+<div style="cursor:pointer" onclick="window.open(window.clickTag, '_blank ')" id="container">
+    <div class="container">
+        <div class="border"></div>
+        <ul id="slides">
+            <li class="slide showing"><img src="1.jpg" alt=""></li>
+            <li class="slide"><img src="2.jpg" alt=""></li>
+            <li class="slide"><img src="3.jpg" alt=""></li>
+
+        </ul>
+        <div class="arrow"><img src="arrow.png" class="bounce" alt=""></div>
+
+
+        <div onmouseover="show()" onmouseout="hide()" class="nota-btn">Nota prawna</div>
+        <div onmouseover="show()" onmouseout="hide()" id="nota" class="nota">
+             <span>
+            Koszt połączenia zgodny ze stawką operatora. Przed podjęciem decyzji odnośnie zawarcia umowy, Open Finance zaleca zapoznanie się z dokumentami stanowiącymi podstawę jej zawarcia. Skorzystanie z produktów następuje wyłącznie na własne ryzyko inwestora. Dane te nie mogą być traktowane jako usługa doradztwa inwestycyjnego lub innego typu doradztwa, w tym świadczenia pomocy prawnej. Niezależnie od informacji przekazanych przez doradcę przed zawarciem każdej transakcji klient jest zobowiązany do określenia i oceny jej ryzyka, potencjalnych korzyści oraz ewentualnych strat, jak również w szczególności charakterystyki, konsekwencji prawnych i księgowych transakcji, konsekwencji zmieniających się czynników rynkowych oraz w sposób niezależny ocenić, czy jest w stanie sam lub po konsultacjach ze swoimi doradcami podjąć takie ryzyko. Ostateczna decyzja, co do zawarcia transakcji, horyzontu inwestycyjnego oraz wielkości zaangażowanych środków należy wyłącznie do klienta.
+<br><br>
+Open Finance SA uprzejmie informuje, że ostateczny kształt oferty kredytowej jest wyłączną decyzją banku, opartą na analizie indywidualnej sytuacji Klienta, dlatego też zaproponowane Klientowi wartość kredytu oraz wysokość raty mogą się różnić od obliczeń dokonanych przez doradcę. W ocenie zdolności kredytowej bank bierze pod uwagę m.in. dochód wnioskodawcy i stan spłaty jego dotychczasowych zobowiązań.
+<br><br>
+Open Finance SA informuje, że współpracuje za wynagrodzeniem na podstawie umowy agencyjnej w zakresie wykonywania czynności pośrednictwa z poniżej wskazanymi podmiotami przy oferowaniu produktów firmowych: Alior Bank SA, BOŚ SA, BZ WBK SA, Deutsche Bank Polska SA, Getin Noble Bank SA, Idea Bank SA, ING Bank Śląski SA, mBank SA, PEKAO Bank Hipoteczny SA, Raiffeisen Bank Polska SA, Pekao SA, Bank BGŻ BNP Paribas SA, Plus Bank SA, Nest Bank SA, Siemens Finance Sp. z o.o., Getin Leasing S.A., Idea Leasing SA, Pekao Leasing SA, Raiffeisen Leasing Polska SA, BZ WBK Leasing SA, Bibby Financial Services Sp. z o.o., Idea Money SA, Pragma Faktoring SA, Inicjatywa Mikro SP z o.o., Kapitałowy Fundusz Pożyczkowy SA, Tise S.A. Towarzystwo Inwestycji Społeczno – Ekonomicznych, EBDF S.A., iwoca Poland sp. z o.o. Stan na 30.03.2017 r.
+<br><br>
+W nawiązaniu do regulacji art. 7 ust. 4-5 Ustawy z dnia 12 maja 2011 roku o kredycie konsumenckim (Dz. U. z dn. 11 sierpnia 2011 r.) Open Finance SA informuje, że współpracuje za wynagrodzeniem, na podstawie umowy agencyjnej, w zakresie wykonywania czynności pośrednictwa, o których mowa w Ustawie z dnia 29 sierpnia 1997 r. Prawo bankowe (tj. Dz. U. z 2002 r. Nr 72 poz. 665) przy udzielaniu kredytów gotówkowych, ze wskazanymi poniżej podmiotami: Alior Bank SA, Deutsche Bank Polska SA, Euro Bank SA, Nest Bank PBP SA, Getin Noble Bank SA, mBank SA, Bank Pocztowy SA, Raiffeisen Bank Polska SA, ING Bank Śląski SA oraz umowy marketingowej z Bank Pekao SA. Stan na dzień 30.03.2017 r.
+<br><br>
+Open Finance SA informuje, że współpracuje za wynagrodzeniem na podstawie umowy agencyjnej, w zakresie wykonywania czynności pośrednictwa, o których mowa w art. 6a Ustawy prawo bankowe z dnia 29 sierpnia 1997 r. (tekst jedn. Dz. U. z 2012 r., poz. 1376 ze zm.), z poniżej wskazanymi podmiotami: Alior Bank SA, BOŚ SA, BZ WBK SA, Deutsche Bank Polska SA, Euro Bank SA, Getin Noble Bank SA, Idea Bank SA, ING Bank Śląski SA, Bank Millennium SA, mBank Hipoteczny SA, PEKAO Bank Hipoteczny SA, PKO BP SA, Bank Pocztowy SA, Raiffeisen Bank Polska SA, PKO Bank Hipoteczny SA, Bank BGŻ BNP Paribas SA oraz na podstawie umowy marketingowej z Plus Bank SA oraz Bank Pekao SA. Stan na dzień 30.03.2017 r.
+<br><br>
+Open Finance Spółka Akcyjna z siedzibą w Warszawie przy ul. Przyokopowej 33, 01-208 Warszawa wpisana do rejestru przedsiębiorców prowadzonego przez Sąd Rejonowy dla m.st. Warszawy XII Wydział Gospodarczy Krajowego Rejestru Sądowego pod numerem KRS 0000196186, NIP 5213280836, REGON 015672908, której kapitał zakładowy wynosi 543 566,63 zł tel. 22 427 47 00, fax 22 276 20 75, e-mail: kontakt@open.pl.  </span>
+        </div>
+    </div>
+</div>
+<script>
+    var note = document.getElementById("nota"),
+        container = document.getElementById('container');
+    note.style.visibility = "hidden";
+    note.style.display = "none";
+    note.style.opacity = 0;
+
+
+    function show() {
+        note.style.visibility = "visible";
+        note.style.display = "block";
+        note.style.opacity = 1;
+    }
+
+    function hide() {
+        note.style.visibility = "hidden";
+        note.style.display = "none";
+        note.style.opacity = 0;
+    }
+    
+
+    container.addEventListener('touchmove', function (e) {
+        e.preventDefault();
+    }, false);
+    var slides = document.querySelectorAll('#slides .slide');
+    var currentSlide = 0;
+    var slideInterval = setInterval(nextSlide,4000);
+
+    function nextSlide(){
+        slides[currentSlide].className = 'slide';
+        currentSlide = (currentSlide+1)%slides.length;
+        slides[currentSlide].className = 'slide showing';
+
+    }
+    function preloadImages(array) {
+        if (!preloadImages.list) {
+            preloadImages.list = [];
+        }
+        var list = preloadImages.list;
+        for (var i = 0; i < array.length; i++) {
+            var img = new Image();
+            img.onload = function () {
+                var index = list.indexOf(this);
+                if (index !== -1) {
+                    list.splice(index, 1);
+                }
+            };
+            list.push(img);
+            img.src = array[i];
+        }
+    }
+    preloadImages(["bg.gif", "arrow.png", "1.jpg", "2.jpg", "3.jpg"]);
+</script>
+</body>
+</html>

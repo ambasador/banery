@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="ad.size" content="width=750,height=300">
+    <link rel="stylesheet" href="style.css">
+      <style type="text/css">
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body scroll="no">
+<script>
+    var clickTag = "https://promocje.open.pl/net/1801-dwie-uslugi/";
+</script>
+<div style="cursor:pointer" onclick="window.open(window.clickTag, '_blank ')">
+    <div class="container" id="container">
+      <div class="imgs" id="one">
+          <img src="1.png" alt="">
+      </div>
+      <div class="imgs" id="two">
+          <img src="2.png" alt="">
+      </div>
+    
+    <div class="nota-btn" id="nota_btn">Nota prawna</div>
+    <div id="nota" class="nota"><span>Szczegóły oferty w oddziałach Open Finance S.A. Przed podjęciem decyzji odnośnie zawarcia umowy, Open Finance S.A. zaleca zapoznanie się z dokumentami stanowiącymi podstawę jej zawarcia. Skorzystanie z produktów następuje wyłącznie na własne ryzyko Klienta. Dane te nie mogą być traktowane jako usługa doradztwa inwestycyjnego lub innego typu doradztwa, w tym świadczenia pomocy prawnej. Niezależnie od informacji uzyskanych w oddziale Open Finance S.A. przed zawarciem każdej transakcji Klient jest zobowiązany do określenia i oceny jej ryzyka, potencjalnych korzyści oraz ewentualnych strat, jak również w szczególności charakterystyki, konsekwencji prawnych i księgowych transakcji, konsekwencji zmieniających się czynników rynkowych oraz w sposób niezależny ocenić, czy jest w stanie sam lub po konsultacjach ze swoimi doradcami podjąć takie ryzyko. Ostateczna decyzja, co do zawarcia transakcji, horyzontu inwestycyjnego oraz wielkości zaangażowanych środków należy wyłącznie do Klienta. 
+<br><br>
+Wszystkie rozmowy telefoniczne prowadzone z konsultantami infolinii Open Finance S.A., w trosce o jakość usług, są rejestrowane. Koszt połączenia z infolinią Open Finance S.A. zgodny ze stawką operatora. Kontakt z infolinią Open Finance S.A. pod numerem 801 600 200. 
+<br><br>
+Open Finance Spółka Akcyjna z siedzibą w Warszawie przy ul. Przyokopowej 33, 01-208 Warszawa wpisana do rejestru przedsiębiorców prowadzonego przez Sąd Rejonowy dla m.st. Warszawy XII Wydział Gospodarczy Krajowego Rejestru Sądowego pod numerem KRS 0000196186, NIP 5213280836, REGON 015672908, której kapitał zakładowy wynosi 543 566,63 zł tel. 22 427 47 00, fax 22 276 20 75, e-mail: kontakt@open.pl.</span>
+</div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+<script>
+
+    !(function () {
+        function a(id){return document.getElementById(id);}
+        function c(querySelector) {
+            return document.querySelectorAll(querySelector);
+        }
+        var note = a('nota_btn'),
+            noteLayer = a('nota'),
+            container = a('container'),
+            one = a('one'),
+            two = a('two');
+        noteLayer.style.visibility = "hidden";
+        noteLayer.style.opacity = 0;
+        noteLayer.style.display = "none";
+        document.body.style.overflow = 'hidden';
+        function __show() {
+            noteLayer.style.visibility = "visible";
+            noteLayer.style.opacity = 1;
+            noteLayer.style.display = "block";
+        }
+
+        function __hide() {
+            noteLayer.style.visibility = "hidden";
+            noteLayer.style.opacity = 0;
+            noteLayer.style.display = "none";
+        }
+
+        note.addEventListener('mouseover', function () {
+            __show()
+        });
+        note.addEventListener('mouseout', function () {
+            __hide()
+        });
+        note.addEventListener('touchstart', function () {
+            __show()
+        });
+        note.addEventListener('touchend', function () {
+            __hide()
+        });
+        noteLayer.addEventListener('mouseover', function () {
+            __show()
+        });
+        noteLayer.addEventListener('touchstart', function () {
+            __show()
+        });
+        noteLayer.addEventListener('mouseout', function () {
+            __hide()
+        });
+        noteLayer.addEventListener('touchend', function () {
+            __hide()
+        });
+
+        function preloadImages(array) {
+            if (!preloadImages.list) {
+                preloadImages.list = [];
+            }
+            var list = preloadImages.list;
+            for (var i = 0; i < array.length; i++) {
+                var img = new Image();
+                img.onload = function() {
+                    var index = list.indexOf(this);
+                    if (index !== -1) {
+
+                        list.splice(index, 1);
+                    }
+                };
+                list.push(img);
+                img.src = array[i];
+            }
+        }
+        preloadImages(["bg.jpg", "1.png", "2.png"]);
+        var tl = new TimelineMax({
+        delay: 0,
+        repeat: -1,
+    });
+     tl.from(one, 1, {
+            scale: .4,
+            x:-50,
+            rotationX: 0,
+            autoAlpha: 0,
+            transformStyle:"preserve-3d",
+            ease: Power4.easeInOut
+        })
+        .to(one, .5, {
+            autoAlpha: 0,
+            x:-5,
+            ease: Power2.easeIn
+        }, "+=3")
+        .from(two, 1, {
+            scale: .4,
+            x:-50,
+            rotationX: 0,
+            autoAlpha: 0,
+            transformStyle:"preserve-3d",
+            ease: Power4.easeInOut
+        }, "-=.5")
+        .to(two, .5, {
+            autoAlpha: 0,
+            x:-10,
+            ease: Power2.easeIn
+        }, "+=3");
+    })();
+</script>
+</body>
+</html>

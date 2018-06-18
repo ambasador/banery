@@ -1,0 +1,68 @@
+.container {
+    position: relative;
+    max-width: 750px;
+    width: 750px;
+    height: 300px;
+    background: #fff url("bg.jpg") top right no-repeat;
+    overflow: hidden;
+    -webkit-box-shadow: inset 0px 0px 0px 1px #999;
+    -moz-box-shadow: inset 0px 0px 0px 1px #999;
+    box-shadow: inset 0px 0px 0px 1px #999;
+
+}
+
+.nota {
+    font-family: Arial, sans-serif;
+    color: #000;
+    background-color: #fff;
+    font-size: 10px;
+    width: 750px;
+    height: 300px;
+    z-index: 8;
+    top: 0;
+    position: absolute;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 10px 20px 10px 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    visibility: hidden;
+}
+
+.nota-btn {
+        position: absolute;
+    font-family: Arial, sans-serif;
+    color: #000;
+    font-size: 10px;
+    cursor: pointer;
+    bottom: 0;
+    right: 10px;
+    height: 20px;
+    line-height: 20px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 7;
+    text-transform: uppercase;
+}
+.nota::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+.nota::-webkit-scrollbar-track {
+    background: rgba(204, 204, 204, 0.1);
+}
+
+.nota::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+
+.imgs{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  visibility: hidden;
+}

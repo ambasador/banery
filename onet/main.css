@@ -1,0 +1,48 @@
+.container,
+body {
+    overflow: hidden
+}
+
+body {
+    margin: 0;
+    padding: 0
+}
+
+.container {
+    width: 800px;
+    height: 100px;
+    position: relative;
+    background: url(bg.jpg) left top no-repeat;
+    -webkit-box-shadow: 0 0 1px #fed127;
+    -moz-box-shadow: 0 0 1px #fed127;
+    box-shadow: 0 0 1px #fed127
+}
+.snow {
+  height: 100px;
+  position: absolute;
+  width: 800px;
+  z-index: 1;
+}
+
+.logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2
+}
+
+.button,
+.slogan {
+    position: absolute;
+    z-index: 3
+}
+
+.slogan {
+    left: 283px;
+    top: 18px
+}
+
+.button {
+    left: 623px;
+    top: 34px
+}

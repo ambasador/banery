@@ -1,0 +1,69 @@
+.container {
+	position: relative;
+	max-width: 750px;
+	width: 750px;
+	height: 300px;
+	background: #fff url("750x300.jpg") top right no-repeat;
+	overflow: hidden;
+	-webkit-box-shadow: inset 0px 0px 0px 1px #999;
+	-moz-box-shadow: inset 0px 0px 0px 0px #999;
+	box-shadow: inset 0px 0px 0px 1px #999
+}
+
+.nota {
+	font-family: arial, sans-serif;
+	line-height: 17px;
+	background: #0D0054;
+	color: #fff;
+	font-size: 13px;
+	width: 750px;
+	height: 300px;
+	z-index: 8;
+	top: 0;
+	left: 0;
+	position: absolute;
+	padding: 10px 10px 10px 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	text-align: justify;
+	overflow-x: auto;
+	visibility: hidden
+}
+
+.nota-btn {
+	position: absolute;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	color: #0D0054;
+	font-size: 13px;
+	cursor: pointer;
+	bottom: -2px;
+	right: 10px;
+	width: 100px;
+	height: 20px;
+	line-height: 20px;
+	margin: 0 auto;
+	text-align: center;
+	z-index: 3;
+}
+
+.nota::-webkit-scrollbar {
+	width: 7px;
+	height: 7px
+}
+
+.nota::-webkit-scrollbar-track {
+	background: rgba(255, 255, 255, 0.4)
+}
+
+.nota::-webkit-scrollbar-thumb {
+	background: rgba(255, 255, 255, 0.4)
+}
+
+.img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	visibility: hidden
+}

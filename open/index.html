@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="ad.size" content="width=750,height=300">
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    </style>
+     <script type="text/javascript">
+        var clickTag = "https://promocje.open.pl/net/1709-ogladaj-porownuj-wybieraj/";
+    </script>
+</head>
+<body scroll="no">
+<div style="cursor:pointer">
+     <a href="javascript:window.open(window.clickTag)">
+    <div class="container" id="container">
+        <div class="images">
+            <img src="1.png" class="img" alt="">
+            <img src="2.png" class="img" alt="">
+            <img src="3.png" class="img" alt="">
+            <img src="4.png" class="img" alt="">
+            <img src="5.png" class="img" alt="">
+        </div>
+
+        <div class="button">
+            <img src="bttn.png" class="bounce one" alt="">
+        </div>
+    </div>
+    </a>
+    <div class="nota-btn" id="nota_btn">Nota prawna</div>
+    <div id="nota" class="nota">
+                                 <span>Szczegóły oferty dostępne w oddziałach Open Finance S.A. Informujemy, że ostateczny kształt oferty kredytowej jest wyłączną decyzją banku, opartą na analizie indywidualnej sytuacji Klienta, dlatego też zaproponowane Klientowi wartość kredytu oraz wysokość raty mogą się różnić od obliczeń dokonanych w oddziale Open Finance S.A. W ocenie zdolności kredytowej bank bierze pod uwagę m.in. dochód wnioskodawcy i stan spłaty jego dotychczasowych zobowiązań.
+<br><br>
+Open Finance S.A. informuje, że współpracuje za wynagrodzeniem na podstawie umowy agencyjnej, w zakresie wykonywania czynności pośrednictwa, o których mowa w art. 6a Ustawy prawo bankowe z dnia 29 sierpnia 1997 r. (tekst jedn. Dz. U. z 2012 r., poz. 1376 ze zm.), z poniżej wskazanymi podmiotami: Alior Bank SA, BOŚ SA, BZ WBK SA, Deutsche Bank Polska SA, Euro Bank SA, Getin Noble Bank SA, ING Bank Śląski SA, mBank S.A., Bank Millennium SA, mBank Hipoteczny SA, PEKAO Bank Hipoteczny SA, PKO BP SA, PKO Bank Hipoteczny SA, Bank Pocztowy SA, Raiffeisen Bank Polska SA, Bank BGŻ BNP Paribas SA oraz na podstawie umowy marketingowej z Plus Bank SA oraz Bank Pekao SA. Stan na dzień 13.06.2017 r.
+<br><br>
+Open Finance S.A. informuje, że nie świadczy usług doradczych w rozumieniu art. 4 pkt 26 ustawy z dnia 23 marca 2017 r. o kredycie hipotecznym oraz nadzorze nad pośrednikami kredytu hipotecznego i agentami (Dz. U. z 2017 r., poz. 819).
+<br><br>
+Wszystkie rozmowy telefoniczne prowadzone z konsultantami infolinii Open Finance S.A., w trosce o jakość usług, są rejestrowane. Koszt połączenia z infolinią Open Finance S.A. zgodny ze stawką operatora.
+Open Finance Spółka Akcyjna z siedzibą w Warszawie przy ul. Przyokopowej 33, 01-208 Warszawa wpisana do rejestru przedsiębiorców prowadzonego przez Sąd Rejonowy dla m.st. Warszawy XII Wydział Gospodarczy Krajowego Rejestru Sądowego pod numerem KRS 0000196186, NIP 5213280836, REGON 015672908, której kapitał zakładowy wynosi 543 566,63 zł tel. 22 427 47 00, fax 22 276 20 75, e-mail: kontakt@open.pl.</span>
+
+    </div>
+</div>
+<script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.19.1_92cf05aba6ca4ea5cbc62b5a7cb924e3_min.js"></script>
+<script>
+
+    !(function () {
+        function a(id){return document.getElementById(id);}
+        function b(className) {return document.getElementsByClassName(className);}
+        function c(querySelector) {return document.querySelectorAll(querySelector);}
+        var note = a('nota_btn'),
+            noteLayer = a('nota'),
+            items = c('img'),
+            one = b('one'),
+            two = b('two'),
+            there = b('there'),
+            length = 5,
+            duration = 1.2;
+        noteLayer.style.visibility = "hidden";
+        noteLayer.style.opacity = 0;
+        noteLayer.style.display = "none";
+        document.body.style.overflow = 'hidden';
+        function __show() {
+            noteLayer.style.visibility = "visible";
+            noteLayer.style.opacity = 1;
+            noteLayer.style.display = "block";
+        }
+
+        function __hide() {
+            noteLayer.style.visibility = "hidden";
+            noteLayer.style.opacity = 0;
+            noteLayer.style.display = "none";
+        }
+        
+        note.addEventListener('mouseover', function () {
+            __show()
+        });
+        note.addEventListener('mouseout', function () {
+            __hide()
+        });
+        note.addEventListener('touchstart', function () {
+            __show()
+        });
+        note.addEventListener('touchend', function () {
+            __hide()
+        });
+        noteLayer.addEventListener('mouseover', function () {
+            __show()
+        });
+        noteLayer.addEventListener('touchstart', function () {
+            __show()
+        });
+        noteLayer.addEventListener('mouseout', function () {
+            __hide()
+        });
+        noteLayer.addEventListener('touchend', function () {
+            __hide()
+        });
+        function preloadImages(array) {
+            if (!preloadImages.list) {
+                preloadImages.list = [];
+            }
+            var list = preloadImages.list;
+            for (var i = 0; i < array.length; i++) {
+                var img = new Image();
+                img.onload = function() {
+                    var index = list.indexOf(this);
+                    if (index !== -1) {
+
+                        list.splice(index, 1);
+                    }
+                };
+                list.push(img);
+                img.src = array[i];
+            }
+        }
+        preloadImages(["bg.gif", "1.png", "2.png", "3.png", "4.png", "5.png", "bttn.png"]);
+        var tl = new TimelineMax({delay: 0, repeat: -1, repeatDelay: 0});
+        for (var i = 0; length > i; i += 1) tl.from(items[i], duration, {
+            y: -60,
+            autoAlpha: 0,
+            ease: Elastic.easeOut
+        }).to(items[i], duration, {
+            y: -60,
+            autoAlpha: 0,
+            ease: Elastic.easeIn
+        });
+    })();
+</script>
+</body>
+</html>

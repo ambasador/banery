@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="ad.size" content="width=300,height=600">
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body scroll="no">
+		<script>
+		var clickTag = "https://www.expander.pl";
+		</script>
+		<div style="cursor:pointer" onclick="window.open(window.clickTag, '_blank ')">
+			<div class="container">
+				<div class="logo">
+					<img src="logo.png" alt="">
+				</div>
+				<div class="text">
+					<img src="1.png" class="one" alt="">
+					<img src="2.png" class="two" alt="">
+					<img src="3.png" class="there" alt="">
+				</div>
+				<div class="arrow">
+					<img src="arrow.png" alt="">
+				</div>
+			</div>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+		<script>
+		! function() {
+    function e(e) {
+        return document.querySelectorAll(e)
+    }
+    var a = new Array;
+    ! function e() {
+        for (i = 0; i < e.arguments.length; i++) a[i] = new Image, a[i].src = e.arguments[i]
+    }(), document.body.style.overflow = "hidden", document.body.style.margin = 0, document.body.style.padding = 0;
+    var t = e(".arrow"),
+        o = e(".logo"),
+        n = e(".one"),
+        r = e(".two"),
+        u = e(".there");
+    var s = new TimelineMax({
+        repeat: -1,
+        repeatDelay: 0,
+        onComplete: function(e) {
+            s.play(next)
+        }
+    });
+    s.from(n, 1, {
+        autoAlpha: 0,
+        scale: 2,
+        ease: Circ.easeOut
+    }, "next").from(r, 1, {
+        autoAlpha: 0,
+        scale: 2,
+        ease: Circ.easeOut
+    }).from(u, 1, {
+        autoAlpha: 0,
+        scale: 2,
+        ease: Circ.easeOut
+    })
+    .set(t, {
+        y: 0
+    }).to(t, .5, {
+        y: 20,
+        ease: Power2.easeOut
+    }, "bounceme").to(t, 1, {
+        y: 0,
+        ease: Bounce.easeOut,
+        delay: .5
+    }, "bounceme").to(n, .2, {
+        autoAlpha: 0,
+        y: 30,
+        delay:2,
+        ease: Power2.easeInOut
+    }).to(r, .2, {
+        autoAlpha: 0,
+        y: 30,
+        ease: Power2.easeInOut
+    }).to(u, .2, {
+        autoAlpha: 0,
+        y: 30,
+        ease: Power2.easeInOut
+    }, "last")
+}();
+		</script>
+	</body>
+</html>

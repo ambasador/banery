@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="ad.size" content="width=750,height=300">
+    <link rel="stylesheet" href="style.css">
+      <style type="text/css">
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body scroll="no">
+<script>
+    var clickTag = "https://promocje.open.pl/net/1802-nowy-dom/krok.php";
+</script>
+<div style="cursor:pointer" onclick="window.open(window.clickTag, '_blank ')">
+    <div class="container" id="container">
+      <div class="img">
+          <img src="1.png" id="one" alt="">
+      </div>
+       <div class="img">
+          <img src="2.png" id="two" alt="">
+      </div>
+       <div class="img">
+          <img src="3.png" id="there" alt="">
+      </div>
+    <div class="nota-btn" id="nota_btn">Nota prawna</div>
+    <div id="nota" class="nota"><span> Szczegóły oferty dostępne w oddziałach Open Finance S.A. Informujemy, że ostateczny kształt oferty kredytowej jest wyłączną decyzją banku, opartą na analizie indywidualnej sytuacji Klienta, dlatego też zaproponowana Klientowi wartość kredytu oraz wysokość raty mogą się różnić od obliczeń dokonanych w oddziale Open Finance S.A. Bank podejmuje decyzję o udzieleniu kredytu po dokonaniu oceny zdolności kredytowej wnioskodawcy, biorąc pod uwagę m.in. dochód wnioskodawcy i stan spłaty jego dotychczasowych zobowiązań.
+<br><br>
+Open Finance S.A., jako pośrednik kredytu hipotecznego informuje, że współpracuje za wynagrodzeniem na podstawie umowy agencyjnej, w zakresie wykonywania czynności faktycznych, o których mowa w art. 6a Ustawy prawo bankowe z dnia 29 sierpnia 1997 r. (tj. Dz. U. z 2016 r. poz. 1988 z późn. zm.), z poniżej wskazanymi Kredytodawcami: Alior Bank S.A., BOŚ S.A., BZ WBK S.A., Deutsche Bank Polska S.A., Euro Bank S.A., ING Bank Śląski S.A., mBank S.A., Bank Millennium S.A., PKO BP S.A., PKO Bank Hipoteczny S.A., Bank Pocztowy S.A., Raiffeisen Bank Polska S.A., Bank BGŻ BNP Paribas S.A., Bank Pekao S.A. oraz Pekao Bank Hipoteczny S.A. Według stanu na dzień 01.03.2018 r.
+<br><br>
+Open Finance S.A. informuje, że jest powiązanym pośrednikiem kredytu hipotecznego w rozumieniu art. 4 pkt 16 ustawy z dnia 23 marca 2017 r. o kredycie hipotecznym oraz o nadzorze nad pośrednikami kredytu hipotecznego i agentami (Dz. U. 2017 r., poz. 819 z późn. zm. - dalej, jako UoKH). Jednocześnie Open Finance SA informuje, że nie świadczy usług doradczych w rozumieniu art. 4 pkt 26 UoKH.
+<br><br>
+Kontakt z infolinią Open Finance S.A. pod numerem 801 600 200. Wszystkie rozmowy telefoniczne prowadzone z konsultantami infolinii Open Finance S.A., w trosce o jakość usług, są rejestrowane. Koszt połączenia z infolinią Open Finance S.A. zgodny ze stawką operatora.
+<br><br>
+Open Finance Spółka Akcyjna z siedzibą w Warszawie przy ul. Przyokopowej 33, 01-208 Warszawa wpisana do rejestru przedsiębiorców prowadzonego przez Sąd Rejonowy dla m.st. Warszawy XII Wydział Gospodarczy Krajowego Rejestru Sądowego pod numerem KRS 0000196186, NIP 5213280836, REGON 015672908, której kapitał zakładowy wynosi 743 566,63 zł, tel. 22 427 47 00, fax 22 276 20 75, e-mail: kontakt@open.pl.</span>
+</div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+<script>
+
+    !(function () {
+        function a(id){
+            return document.getElementById(id);
+        }
+        function c(querySelector) {
+            return document.querySelectorAll(querySelector);
+        }
+        var note = a('nota_btn'),
+            noteLayer = a('nota'),
+            container = a('container'),
+            one = a('one'),
+            two = a('two'),
+            there = a('there');
+        noteLayer.style.visibility = "hidden";
+        noteLayer.style.opacity = 0;
+        noteLayer.style.display = "none";
+        document.body.style.overflow = 'hidden';
+        function __show() {
+            noteLayer.style.visibility = "visible";
+            noteLayer.style.opacity = 1;
+            noteLayer.style.display = "block";
+        }
+
+        function __hide() {
+            noteLayer.style.visibility = "hidden";
+            noteLayer.style.opacity = 0;
+            noteLayer.style.display = "none";
+        }
+
+        note.addEventListener('mouseover', function () {
+            __show()
+        });
+        note.addEventListener('mouseout', function () {
+            __hide()
+        });
+        note.addEventListener('touchstart', function () {
+            __show()
+        });
+        note.addEventListener('touchend', function () {
+            __hide()
+        });
+        noteLayer.addEventListener('mouseover', function () {
+            __show()
+        });
+        noteLayer.addEventListener('touchstart', function () {
+            __show()
+        });
+        noteLayer.addEventListener('mouseout', function () {
+            __hide()
+        });
+        noteLayer.addEventListener('touchend', function () {
+            __hide()
+        });
+
+        function preloadImages(array) {
+            if (!preloadImages.list) {
+                preloadImages.list = [];
+            }
+            var list = preloadImages.list;
+            for (var i = 0; i < array.length; i++) {
+                var img = new Image();
+                img.onload = function() {
+                    var index = list.indexOf(this);
+                    if (index !== -1) {
+
+                        list.splice(index, 1);
+                    }
+                };
+                list.push(img);
+                img.src = array[i];
+            }
+        }
+        preloadImages(["bg.jpg","1.png","2.png","3.png"]);
+        var tl = new TimelineMax({repeat:-1, delay:0});
+        tl.from(one, .7, { x: -20, opacity: 0, ease: Elastic.easeOut }),
+        tl.from(two, .7, { x: -20, opacity: 0, ease: Elastic.easeOut }),
+        tl.from(there, .7, { x: -20, opacity: 0, ease: Elastic.easeOut }),
+        tl.to(one, .5, { scale:1.05, ease: Power4.easeOut }),
+        tl.to(one, .3, { scale:1, ease: Power4.easeOut }),
+        tl.to(two, .5, { scale:1.05, ease: Power4.easeOut }),
+        tl.to(two, .3, { scale:1, ease: Power4.easeOut }),
+        tl.to(there, .5, { scale:1.05, ease: Power4.easeOut }),
+        tl.to(there, .3, { scale:1, ease: Power4.easeOut }),
+        tl.to(there, .2, { opacity:0,delay:1, x:20, ease: Power4.easeOut }),
+        tl.to(two, .2, { opacity:0, x:20, ease: Power4.easeOut }),
+        tl.to(one, .2, { opacity:0, x:20, ease: Power4.easeOut });
+                 
+    })();
+</script>
+</body>
+</html>
