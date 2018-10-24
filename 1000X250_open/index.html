@@ -54,7 +54,102 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 <script>
 
-  !function(){function e(e){return document.getElementById(e)}function t(e){return document.querySelector(e)}var o=e("nota_btn"),a=e("nota"),n=(e("container"),t(".logo")),s=t(".btn"),i=t(".text"),r=t(".one"),u=t(".two"),l=t(".elipse"),d=(t(".elipse__2"),t(".bg"));t(".orange");function c(){a.style.visibility="visible",a.style.opacity=1,a.style.display="block"}function y(){a.style.visibility="hidden",a.style.opacity=0,a.style.display="none"}a.style.visibility="hidden",a.style.opacity=0,a.style.display="none",document.body.style.overflow="hidden",o.addEventListener("mouseover",function(){c()}),o.addEventListener("mouseout",function(){y()}),o.addEventListener("touchstart",function(){c()}),o.addEventListener("touchend",function(){y()}),a.addEventListener("mouseover",function(){c()}),a.addEventListener("touchstart",function(){c()}),a.addEventListener("mouseout",function(){y()}),a.addEventListener("touchend",function(){y()}),function e(t){e.list||(e.list=[]);for(var o=e.list,a=0;a<t.length;a++){var n=new Image;n.onload=function(){var e=o.indexOf(this);-1!==e&&o.splice(e,1)},o.push(n),n.src=t[a]}}(["bg.jpg","btn.jpg","logo.png","one.svg","text.svg","two.svg","elipse.svg"]),new TimelineMax({delay:0,repeat:-1,repeatDelay:0}).from(d,.5,{autoAlpha:0,ease:Power3.easeOut}).from(o,.3,{autoAlpha:0,ease:Power3.easeOut}).from(n,.5,{autoAlpha:0,y:20,ease:Power3.easeOut},"=-.2").from(s,.5,{autoAlpha:0,y:20,ease:Power3.easeOut},"=-.2").from(i,.5,{autoAlpha:0,y:20,ease:Power3.easeOut},"=-.2").from(l,.1,{autoAlpha:0}).to(l,.1,{rotation:360,ease:Linear.easeNone,repeat:6}).from(r,1,{autoAlpha:0,scale:.9,ease:Power3.easeOut}).to(r,.5,{autoAlpha:0,delay:3,scale:.9,ease:Power3.easeOut}).to(l,.1,{rotation:-360,ease:Linear.easeNone,repeat:6}).from(u,1,{autoAlpha:0,scale:.9,ease:Power3.easeOut}).to(u,.1,{autoAlpha:0,delay:3,ease:Power3.easeOut})}();
+
+    !(function () {
+      function a(b) {
+          return document.getElementById(b);
+      }
+        function c(querySelector) {
+            return document.querySelector(querySelector);
+        }
+        var note = a('nota_btn'),
+            noteLayer = a('nota'),
+            container = a('container'),
+            logo = c('.logo'),
+            btn = c('.btn'),
+            text = c('.text'),
+            one = c('.one'),
+            two = c('.two'),
+            elipse = c('.elipse'),
+            elipseSecond = c('.elipse__2'),
+            bg = c('.bg'),
+            orange = c('.orange');
+        noteLayer.style.visibility = "hidden";
+        noteLayer.style.opacity = 0;
+        noteLayer.style.display = "none";
+        document.body.style.overflow = 'hidden';
+        function __show() {
+            noteLayer.style.visibility = "visible";
+            noteLayer.style.opacity = 1;
+            noteLayer.style.display = "block";
+        }
+
+        function __hide() {
+            noteLayer.style.visibility = "hidden";
+            noteLayer.style.opacity = 0;
+            noteLayer.style.display = "none";
+        }
+
+        note.addEventListener('mouseover', function () {
+            __show()
+        });
+        note.addEventListener('mouseout', function () {
+            __hide()
+        });
+        note.addEventListener('touchstart', function () {
+            __show()
+        });
+        note.addEventListener('touchend', function () {
+            __hide()
+        });
+        noteLayer.addEventListener('mouseover', function () {
+            __show()
+        });
+        noteLayer.addEventListener('touchstart', function () {
+            __show()
+        });
+        noteLayer.addEventListener('mouseout', function () {
+            __hide()
+        });
+        noteLayer.addEventListener('touchend', function () {
+            __hide()
+        });
+
+        function preloadImages(array) {
+            if (!preloadImages.list) {
+                preloadImages.list = [];
+            }
+            var list = preloadImages.list;
+            for (var i = 0; i < array.length; i++) {
+                var img = new Image();
+                img.onload = function() {
+                    var index = list.indexOf(this);
+                    if (index !== -1) {
+
+                        list.splice(index, 1);
+                    }
+                };
+                list.push(img);
+                img.src = array[i];
+            }
+        }
+        preloadImages(["bg.jpg", "btn.jpg", "logo.png", "one.svg", "text.svg", "two.svg", "elipse.svg"]);
+
+  var tl = new TimelineMax({ delay: 0, repeat: -1, repeatDelay: 0 });
+  tl.from(bg, .5, {autoAlpha: 0, ease: Power3.easeOut })
+  .from(note, .3, {autoAlpha: 0, ease: Power3.easeOut })
+    .from(logo, .5,{autoAlpha: 0, y:20,  ease: Power3.easeOut }, "=-.2")
+    .from(btn, .5,{autoAlpha: 0, y:20, ease: Power3.easeOut }, "=-.2")
+    .from(text, .5,{autoAlpha: 0, y:20, ease: Power3.easeOut }, "=-.2")
+    .from(elipse, .1, {autoAlpha: 0})
+    .to(elipse, .1, {rotation:360, ease:Linear.easeNone, repeat:6})
+    .from(one, 1, {autoAlpha: 0, scale:.9, ease: Power3.easeOut })
+    .to(one, .5, {autoAlpha: 0, delay: 3, scale:.9, ease: Power3.easeOut })
+    .to(elipse, .1, {rotation:-360, ease:Linear.easeNone, repeat:6})
+    .from(two, 1, {autoAlpha: 0, scale:.9, ease: Power3.easeOut })
+    .to(two, .1, {autoAlpha: 0, delay:3, ease: Power3.easeOut })
+
+    })();
 </script>
 </body>
 </html>
