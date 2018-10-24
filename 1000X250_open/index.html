@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="ad.size" content="width=1000,height=250">
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body scroll="no">
+<script>
+    var clickTag = "";
+</script>
+<div style="cursor:pointer" onclick="window.open(window.clickTag, '_blank ')">
+    <div class="container" id="container">
+        <div class="bg">
+          <img src="bg.jpg" alt="">
+        </div>
+        <div class="elipse">
+          <img src="elipse.svg" alt="">
+        </div>
+
+        <div class="one">
+          <img src="one.svg" alt="">
+        </div>
+        <div class="two">
+          <img src="two.svg" alt="">
+        </div>
+        <div class="btn">
+          <img src="btn.jpg" alt="">
+        </div>
+        <div class="logo">
+          <img src="logo.png" alt="">
+        </div>
+        <div class="text">
+          <img src="text.svg" alt="">
+        </div>
+      <div class="orange"></div>
+    </div>
+    <div class="nota-btn" id="nota_btn">Nota prawna</div>
+    <div id="nota" class="nota"><span>Informujemy, że decyzja o udzieleniu kredytu jest wyłączną decyzją banku, podejmowaną po dokonaniu oceny zdolności kredytowej wnioskodawcy przez bank.<br><br>Open Finance S.A., jako pośrednik kredytu hipotecznego informuje, że współpracuje za wynagrodzeniem na podstawie umowy agencyjnej, w zakresie wykonywania czynności faktycznych, o których mowa w art. 6a Ustawy prawo bankowe z dnia 29 sierpnia 1997 r. (tj. Dz. U. z 2016 r. poz. 1988 z późn. zm.), z poniżej wskazanymi Kredytodawcami: Alior Bank S.A., BOŚ S.A., BZ WBK S.A., Deutsche Bank Polska S.A., Euro Bank S.A., ING Bank Śląski S.A., mBank S.A., Bank Millennium S.A., PKO BP S.A., PKO Bank Hipoteczny S.A., Bank Pocztowy S.A., Raiffeisen Bank Polska S.A., Bank BGŻ BNP Paribas S.A., Bank Pekao S.A. oraz Pekao Bank Hipoteczny S.A. Według stanu na dzień 30.07.2018 r.<br><br>Open Finance S.A. informuje, że jest powiązanym pośrednikiem kredytu hipotecznego w rozumieniu art. 4 pkt 16 ustawy z dnia 23 marca 2017 r. o kredycie hipotecznym oraz o nadzorze nad pośrednikami kredytu hipotecznego i agentami  (Dz. U.  2017 r., poz. 819 z późn. zm. – dalej, jako UoKH). Jednocześnie Open Finance S.A. informuje, że nie świadczy usług doradczych w rozumieniu art. 4 pkt 26 UoKH.<br><br>Open Finance Spółka Akcyjna z siedzibą w Warszawie przy ul. Przyokopowej 33, 01-208 Warszawa wpisana do rejestru przedsiębiorców prowadzonego przez Sąd Rejonowy dla m.st. Warszawy XII Wydział Gospodarczy Krajowego Rejestru Sądowego pod numerem KRS 0000196186, NIP 5213280836, REGON 015672908, kapitał zakładowy 743 566,63 zł w całości wpłacony.
+</span>
+
+    </div>
+</div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+<script>
+
+  !function(){function e(e){return document.getElementById(e)}function t(e){return document.querySelector(e)}var o=e("nota_btn"),a=e("nota"),n=(e("container"),t(".logo")),s=t(".btn"),i=t(".text"),r=t(".one"),u=t(".two"),l=t(".elipse"),d=(t(".elipse__2"),t(".bg"));t(".orange");function c(){a.style.visibility="visible",a.style.opacity=1,a.style.display="block"}function y(){a.style.visibility="hidden",a.style.opacity=0,a.style.display="none"}a.style.visibility="hidden",a.style.opacity=0,a.style.display="none",document.body.style.overflow="hidden",o.addEventListener("mouseover",function(){c()}),o.addEventListener("mouseout",function(){y()}),o.addEventListener("touchstart",function(){c()}),o.addEventListener("touchend",function(){y()}),a.addEventListener("mouseover",function(){c()}),a.addEventListener("touchstart",function(){c()}),a.addEventListener("mouseout",function(){y()}),a.addEventListener("touchend",function(){y()}),function e(t){e.list||(e.list=[]);for(var o=e.list,a=0;a<t.length;a++){var n=new Image;n.onload=function(){var e=o.indexOf(this);-1!==e&&o.splice(e,1)},o.push(n),n.src=t[a]}}(["bg.jpg","btn.jpg","logo.png","one.svg","text.svg","two.svg","elipse.svg"]),new TimelineMax({delay:0,repeat:-1,repeatDelay:0}).from(d,.5,{autoAlpha:0,ease:Power3.easeOut}).from(o,.3,{autoAlpha:0,ease:Power3.easeOut}).from(n,.5,{autoAlpha:0,y:20,ease:Power3.easeOut},"=-.2").from(s,.5,{autoAlpha:0,y:20,ease:Power3.easeOut},"=-.2").from(i,.5,{autoAlpha:0,y:20,ease:Power3.easeOut},"=-.2").from(l,.1,{autoAlpha:0}).to(l,.1,{rotation:360,ease:Linear.easeNone,repeat:6}).from(r,1,{autoAlpha:0,scale:.9,ease:Power3.easeOut}).to(r,.5,{autoAlpha:0,delay:3,scale:.9,ease:Power3.easeOut}).to(l,.1,{rotation:-360,ease:Linear.easeNone,repeat:6}).from(u,1,{autoAlpha:0,scale:.9,ease:Power3.easeOut}).to(u,.1,{autoAlpha:0,delay:3,ease:Power3.easeOut})}();
+</script>
+</body>
+</html>
