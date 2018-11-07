@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="ad.size" content="width=1000,height=250">
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+    html,
+    body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    }
+    </style>
+  </head>
+  <body scroll="no">
+    <script>
+    var clickTag = "";
+    </script>
+    <div style="cursor:pointer" onclick="window.open(window.clickTag, '_blank ')">
+      <div class="container" id="container">
+            <div class="grey">
+
+            </div>
+            <div class="text">
+              <img src="text.png" alt="">
+            </div>
+            <div class="btn">
+              <img src="btn.png" alt="">
+            </div>
+            <ul class="slogan">
+                <li>
+                    <img src="one.png" alt="">
+                </li>
+                <li>
+                    <img src="two.png" alt="">
+                </li>
+                <li>
+                    <img src="one.png" alt="">
+                </li>
+                <li>
+                    <img src="two.png" alt="">
+                </li>
+                <li>
+                    <img src="one.png" alt="">
+                </li>
+                <li>
+                    <img src="two.png" alt="">
+                </li>
+                <li>
+                    <img src="one.png" alt="">
+                </li>
+                <li>
+                    <img src="two.png" alt="">
+                </li>
+                <li>
+                    <img src="one.png" alt="">
+                </li>
+                <li>
+                    <img src="two.png" alt="">
+                </li>
+            </ul>
+            <div class="chair">
+                <img src="chair.png" alt="">
+            </div>
+            <div class="tree">
+                <img src="tree.png" alt="">
+            </div>
+            <ul class="room">
+              <li class="paint-1">
+                  <img src="paint-1.png" alt="">
+              </li>
+              <li class="paint-2">
+                  <img src="paint-2.png" alt="">
+              </li>
+              <li class="paint-3">
+                  <img src="paint-3.png" alt="">
+              </li>
+            </ul>
+            <div class="lamp">
+                <img src="lamp.png" alt="">
+            </div>
+            <div class="chair2">
+                <img src="chair2.png" alt="">
+            </div>
+            <div class="table">
+                <img src="table.png" alt="">
+            </div>
+            <div class="pod">
+                <img src="pod.png" alt="">
+            </div>
+            <div class="logo">
+                <img src="logo.png" alt="">
+            </div>
+      </div>
+      <div class="nota-btn" id="nota_btn">Nota prawna</div>
+      <div id="nota" class="nota"><span>Informujemy, że decyzja o udzieleniu kredytu jest wyłączną decyzją banku, podejmowaną po dokonaniu oceny zdolności kredytowej wnioskodawcy przez bank.<br><br>Open Finance S.A., jako pośrednik kredytu hipotecznego informuje, że współpracuje za wynagrodzeniem na podstawie umowy agencyjnej, w zakresie wykonywania czynności faktycznych, o których mowa w art. 6a Ustawy prawo bankowe z dnia 29 sierpnia 1997 r. (tj. Dz. U. z 2016 r. poz. 1988 z późn. zm.), z poniżej wskazanymi Kredytodawcami: Alior Bank S.A., BOŚ S.A., BZ WBK S.A., Deutsche Bank Polska S.A., Euro Bank S.A., ING Bank Śląski S.A., mBank S.A., Bank Millennium S.A., PKO BP S.A., PKO Bank Hipoteczny S.A., Bank Pocztowy S.A., Raiffeisen Bank Polska S.A., Bank BGŻ BNP Paribas S.A., Bank Pekao S.A. oraz Pekao Bank Hipoteczny S.A. Według stanu na dzień 30.07.2018 r.<br><br>Open Finance S.A. informuje, że jest powiązanym pośrednikiem kredytu hipotecznego w rozumieniu art. 4 pkt 16 ustawy z dnia 23 marca 2017 r. o kredycie hipotecznym oraz o nadzorze nad pośrednikami kredytu hipotecznego i agentami  (Dz. U.  2017 r., poz. 819 z późn. zm. – dalej, jako UoKH). Jednocześnie Open Finance S.A. informuje, że nie świadczy usług doradczych w rozumieniu art. 4 pkt 26 UoKH.<br><br>Open Finance Spółka Akcyjna z siedzibą w Warszawie przy ul. Przyokopowej 33, 01-208 Warszawa wpisana do rejestru przedsiębiorców prowadzonego przez Sąd Rejonowy dla m.st. Warszawy XII Wydział Gospodarczy Krajowego Rejestru Sądowego pod numerem KRS 0000196186, NIP 5213280836, REGON 015672908, kapitał zakładowy 743 566,63 zł w całości wpłacony.
+      </span>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+  <script>
+  !(function () {
+      function a(b) {
+          return document.getElementById(b);
+      }
+        function c(querySelector) {
+            return document.querySelector(querySelector);
+        }
+        function qSA(querySeletorAll){
+          return document.querySelectorAll(querySeletorAll);
+        }
+        var note = a('nota_btn'),
+            noteLayer = a('nota'),
+            container = a('container'),
+            grey = c('.grey'),
+            btn = c('.btn'),
+            logo = c('.logo'),
+            text = c('.text'),
+            items = qSA('.slogan li'),
+            room = qSA('.room li'),
+            ease = Elastic.easeOut.config(1, 0.3),
+            power = Power2.easeInOut,
+            back = Back.easeInOut.config(1.7),
+            slowmo =  SlowMo.ease.config(0.7, 0.7, false),
+            chair = c('.chair'),
+            chair2 = c('.chair2'),
+            tree = c('.tree'),
+            lamp = c('.lamp'),
+            pod = c('.pod'),
+            table = c('.table'),
+                length = items.length,
+                duration = 1;
+        noteLayer.style.visibility = "hidden";
+        noteLayer.style.opacity = 0;
+        noteLayer.style.display = "none";
+        document.body.style.overflow = 'hidden';
+        function __show() {
+            noteLayer.style.visibility = "visible";
+            noteLayer.style.opacity = 1;
+            noteLayer.style.display = "block";
+        }
+
+        function __hide() {
+            noteLayer.style.visibility = "hidden";
+            noteLayer.style.opacity = 0;
+            noteLayer.style.display = "none";
+        }
+
+        note.addEventListener('mouseover', function () {
+            __show()
+        });
+        note.addEventListener('mouseout', function () {
+            __hide()
+        });
+        note.addEventListener('touchstart', function () {
+            __show()
+        });
+        note.addEventListener('touchend', function () {
+            __hide()
+        });
+        noteLayer.addEventListener('mouseover', function () {
+            __show()
+        });
+        noteLayer.addEventListener('touchstart', function () {
+            __show()
+        });
+        noteLayer.addEventListener('mouseout', function () {
+            __hide()
+        });
+        noteLayer.addEventListener('touchend', function () {
+            __hide()
+        });
+
+        function preloadImages(array) {
+            if (!preloadImages.list) {
+                preloadImages.list = [];
+            }
+            var list = preloadImages.list;
+            for (var i = 0; i < array.length; i++) {
+                var img = new Image();
+                img.onload = function() {
+                    var index = list.indexOf(this);
+                    if (index !== -1) {
+
+                        list.splice(index, 1);
+                    }
+                };
+                list.push(img);
+                img.src = array[i];
+            }
+        }
+        preloadImages(["logo.png", "btn.png", "one.png", "text.png", "two.png"]);
+
+
+
+  var tl = new TimelineMax({ delay: -1, repeat: -1, repeatDelay: 0 });
+  tl.from(grey, 1,{ease: power, x: -665, backgroundColor: "#609" })
+  .from(chair, .5,{autoAlpha: 0, ease: power, x: 300})
+  .from(tree, .5,{autoAlpha: 0,ease: power, x: -300}, "=-.5")
+  .staggerFrom(room, .5, {autoAlpha: 0, ease: power,x:-300}, 0.2, "=-.5")
+  .from(table, .5,{autoAlpha: 0,ease: power, x: -300}, "=-.5")
+  .from(chair2, .5,{autoAlpha: 0,ease: power, x: -300}, "=-.5")
+  .from(pod, .5,{autoAlpha: 0,ease: power, y: -300}, "=-.5")
+  .from(lamp, .5,{autoAlpha: 0,ease: power, y: -300}, "=-.5")
+  .from(text, .5,{autoAlpha: 0,ease: back, x: -300, scale:.1}, "=-.5")
+  .from(btn, 1.5,{ease: ease, x: 300}, "=-.5")
+  for (var i = 0; length > i; i += 1){
+    tl.from(items[i], duration, { x: -20, autoAlpha: 0,scale:.1, ease: Elastic.easeOut });
+    tl.to(btn, .2,{ease: power, scale:.9});
+    tl.to(btn, .2,{ease: power, scale:1});
+    tl.to(items[i], duration, { x: -20, autoAlpha: 0, scale:1, ease: Elastic.easeIn });
+  }
+  tl.to(chair, .5,{autoAlpha: 0, ease: power, x: 300}, "=-1")
+  .to(tree, .5,{autoAlpha: 0,ease: power, x: -300}, "=-1")
+  .staggerTo(room, .5, {autoAlpha: 0, ease: power,x:-300}, 0.2, "=-1.5")
+  .to(table, .5,{autoAlpha: 0,ease: power, x: -300}, "=-1")
+  .to(chair2, .5,{autoAlpha: 0,ease: power, x: -300}, "=-1")
+  .to(pod, .5,{autoAlpha: 0,ease: power, y: -300}, "=-1")
+  .to(lamp, .5,{autoAlpha: 0,ease: power, y: -300}, "=-1")
+  .to(text, .5,{autoAlpha: 0,ease: back, x: -300, scale:.1}, "=-1")
+  .to(btn, 1.5,{ease: ease, x: 300}, "=-1")
+  .to(grey, 1,{ease: power, x: -665, backgroundColor: "#609" })
+    })();
+  </script>
+</body>
+</html>

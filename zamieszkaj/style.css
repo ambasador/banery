@@ -1,0 +1,167 @@
+.container {
+  position: relative;
+  max-width: 1000px;
+  width: 1000px;
+  height: 250px;
+  overflow: hidden;
+  -webkit-box-shadow: inset 0px 0px 0px 1px #f60;
+  -moz-box-shadow: inset 0px 0px 0px 1px #f60;
+  box-shadow: inset 0px 0px 0px 1px #f60
+}
+
+.nota {
+  font-family: Arial, sans-serif;
+  color: #000;
+  background-color: #fff;
+  font-size: 12px;
+  width: 1000px;
+  height: 250px;
+  z-index: 8;
+  top: 0;
+  position: absolute;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 10px 20px 10px 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  visibility: hidden
+}
+
+.nota-btn {
+  position: absolute;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+  top: 8px;
+  left: 559px;
+  width: 100px;
+  height: 20px;
+  line-height: 20px;
+  margin: 0 auto;
+  z-index: 5;
+  text-align: center;
+  text-transform: uppercase
+}
+
+.nota::-webkit-scrollbar {
+  width: 7px;
+  height: 7px
+}
+
+.nota::-webkit-scrollbar-track {
+  background: rgba(204, 204, 204, 0.1)
+}
+
+.nota::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1)
+}
+.grey{
+  position: absolute;
+  z-index: 1;
+  left: 1px;
+  top: 1px;
+  width: 664px;
+  height: 248px;
+  background: #ababab;
+}
+.text{
+  position: absolute;
+  z-index: 2;
+  left: 34px;
+  top: 39px;
+}
+.slogan{
+  position: absolute;
+  list-style: none;
+  left: 34px;
+  top: 164px;
+  z-index: 2;
+  margin:0;
+  padding: 0;
+}
+.slogan li{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+}
+.btn{
+  position: absolute;
+  z-index: 2;
+  left: 727px;
+  top: 94px;
+}
+.slogan li.button{
+  position: absolute;
+z-index: 4;
+left: 693px;
+top: -69px;
+}
+.logo{
+  position: absolute;
+  z-index: 2;
+  left: 841px;
+  top: 178px;
+}
+.chair{
+  position: absolute;
+  z-index: 2;
+  left: 559px;
+  top: 94px;
+}
+.tree{
+  position: absolute;
+  z-index: 3;
+  left: 228px;
+  top: 29px;
+}
+.room{
+  position: absolute;
+  z-index: 1;
+  left: 327px;
+  top: 29px;
+  margin: 0;
+  padding: 0;
+  list-style: none
+}
+.room li{
+    display: inline-block;
+    margin-right: 10px;
+}
+.table{
+  position: absolute;
+  z-index: 1;
+  left: 427px;
+  top: 157px;
+  margin: 0;
+  padding: 0
+}
+.chair2{
+  position: absolute;
+  z-index: 1;
+  left: 369px;
+  top: 94px;
+  margin: 0;
+  padding: 0
+}
+.pod{
+  position: absolute;
+  z-index: 1;
+  left: 481px;
+  top: 142px;
+  margin: 0;
+  padding: 0
+}
+.lamp{
+  position: absolute;
+  z-index: 1;
+  left: 385px;
+  top: -40px;
+  margin: 0;
+  padding: 0
+}
